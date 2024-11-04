@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"  # Mapea el puerto 80 de la máquina al puerto 80 del contenedor
+    volumes:
+      - .:/app  # Sincroniza tu código entre el contenedor y la máquina local
+    environment:
+      - NODE_ENV=production
